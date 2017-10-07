@@ -1,0 +1,9 @@
+form {
+    font: 12px 'Trebuchet MS', Arial, Helvetica, sans-serif;
+}
+input, label {
+    display:block;
+}
+label{
+  font-weight: bold;
+}

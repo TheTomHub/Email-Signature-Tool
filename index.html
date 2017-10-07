@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="generator.js"></script>
+<title>Tom - Signature Generator</title>
+</head>
+<form>
+        <div><label>Your photo:</label>
+        <label style="color: #ff0000; color: #DCE3E4; font-weight: normal;">Photo should be square. Tip: Save your LinkedIn photo to your PC and upload it here.
+        <input type="file" onchange="previewFile()">
+        </label>
+        </div>
+        <br>
+        <div><label>Your name:</label>
+        <input id="name" type="text" name="name" onKeyup="addname()">
+        </div>
+        <br>        
+        <div><label>Job Title:</label>
+        <input id="jobtitle" type="text" name="jobtitle" onKeyup="addjobtitle()">           </div>
+        <br>
+        <div><label>Region you cover:</label>
+        <input id="region" type="text" name="region" onKeyup="addregion()">
+        </div>
+        <br>
+        <div><label>Location:</label></div>
+        <select id="mySelect">
+          <option>Office address #1</option>
+          <option>Office address #2</option>
+          <option>Office address #3</option>
+          <option>Office address #4</option>
+          <option>Office address #5</option>
+        </select>
+        <input type="button" onclick="getOption()" value="Click here to use this location">
+        <br>
+        <div><label>Office no:</label></div>
+        <input id="officeno" type="text" name="mobileno" onKeyup="addofficeno()">
+        <br>
+        <div><label>Mobile no:</label></div>
+        <input id="mobileno" type="text" name="mobileno" onKeyup="addmobileno()">
+        <br>
+        <div><label>Twitter Profile Url:</label></div>
+        <input class="inline" id="twitter" type="text" name="twitter" onKeyup="addtwitter()">
+        <br>
+        <div><label>LinkedIn Profile Url:</label></div>
+        <input class="inline" id="linkedin" type="text" name="linkedin" onKeyup="addlinkedin()">
+        <br>
+</form>        
+
+<body>
+  <div id="copy">  
+    <table width="584" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="center"  valign="middle">
+          <img src="" border="2" width="120" height="120" style="background-repeat: no-repeat; background-position: 50%; border-radius: 50%; display:block; border-color: #DCE3E4;">
+        
+      </td>
+      <td align="center">
+        <table width="385" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td align="left" height="25" style="font-family:Trebuchet MS, Arial, Helvetica, sans-serif; color: #ff0000; font-size: 18px; font-weight: bold; -webkit-text-size-adjust:none;">
+              <div>
+                <span id="name1"></span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td align="left" height="25" style="font-family:Trebuchet MS, Arial, Helvetica, sans-serif; color: #000000; font-size: 14px; -webkit-text-size-adjust:none;">
+              <div>
+                <span id="jobtitle1"></span><span> - </span><span id="region1" style="color: #F80000"></span>
+              </div>
+              </td>
+          </tr>
+          <tr>
+            <td align="left" height="25" style="font-family:Trebuchet MS, Arial, Helvetica, sans-serif; color: #000000; font-size: 14px; -webkit-text-size-adjust:none;">
+              <div>
+                <span id="demo"></span> 
+          <tr>
+            <td align="left" height="25" style="font-family:Trebuchet MS, Arial, Helvetica, sans-serif; color: #000000; font-size: 14px; -webkit-text-size-adjust:none;">
+              Office: <span id="officeno1"></span> | Mobile: <span id="mobileno1"></span>
+            </td>
+          </tr>
+          <tr>
+            <td align="left" height="36">
+              <table width="385" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                <td align="left" vertical-align="middle">
+                <div>
+                <span style="font-family:Arial; color: #F80000; vertical-align: middle;">Company</span> <span style="font-family:Arial; color:#000000; vertical-align: middle; padding-right:5px;">Name</span>
+                <span id="tw" href=""><img id="twimg" border="0" src="http://image000.flaticon.com/icons/svg/145/145812.svg" width="25" height="25" alt="Twitter" style="vertical-align: middle"></span>
+                <span id="li" href=""><img id="limg" border="0" src="http://image000.flaticon.com/icons/svg/145/145807.svg" width="25" height="25" alt="LinkedIn" style="vertical-align: middle;"></span>
+ </div>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td align="center" valign="middle">
+        <a href=""><img border="0" src="http://4vector.com/i/free-vector-white-red-rounded-rectangle-clip-art_113314_White_Red_Rounded_Rectangle_clip_art_hight.png" width="60" height="96" alt="this is the company" style="display:block;"></a>
+      </td>
+    </tr>
+  </table>
+</div>
+</body>
+<br>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.10/clipboard.min.js"></script>
+<button type="button" id="copy-button" data-clipboard-target="#copy">Copy</button>
